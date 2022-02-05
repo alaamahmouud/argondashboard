@@ -32,12 +32,15 @@
       </div>
     </div>
     <!-- Page content -->
+
         
     <div class="container-fluid mt--6">
       <div class="row">
         <div class="col">
           <div class="card">
             <!-- Card header -->
+
+            </div>
             <div class="card-header border-0">
               <h3 class="mb-0">Categories</h3>
             </div>
@@ -49,6 +52,29 @@
                 </a>
             </div>
         </div><br>
+
+        {!! Form::open([
+                'method' => 'GET'
+            ]) !!}
+           
+            <div class="navbar-search navbar-search-light form-inline mr-sm-3">
+                    <label for="" >&nbsp;</label>
+                    {!! Form::text('name',old('name'),[
+                        'class' => 'form-control',
+                        'placeholder' => 'search for name'
+                    ]) !!}
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">&nbsp;</label>
+                    <button class="btn btn-primary btn-block" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            {!! Form::close() !!}
 
             <!-- Light table -->
             <div class="table-responsive">

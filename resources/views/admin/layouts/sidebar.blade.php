@@ -15,7 +15,7 @@
           <ul class="navbar-nav">
 
             <li class="nav-item">
-              <a class="nav-link" href="{{url('admin/')}}">
+              <a class="nav-link" href="{{url('admin/clients')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Home</span>
               </a>
