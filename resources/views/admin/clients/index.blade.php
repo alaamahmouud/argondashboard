@@ -24,6 +24,7 @@
                 </ol>
               </nav>
             </div>
+
             <!-- <div class="col-lg-6 col-5 text-right">
               <a href="#" class="btn btn-sm btn-neutral">New</a>
               <a href="#" class="btn btn-sm btn-neutral">Filters</a>
@@ -32,6 +33,7 @@
         </div>
       </div>
     </div>
+
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
@@ -73,6 +75,7 @@
                     <th scope="col" class="sort" data-sort="name">name</th>
                     <th scope="col" class="sort" data-sort="email">email</th>
                     <th scope="col" class="sort" data-sort="phone">phone</th>
+                    <!-- <th scope="col" class="sort" data-sort="phone">Activate</th> -->
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -94,6 +97,9 @@
                                 <td>{{$record->full_name}}</td>
                                 <td>{{$record->email}}</td>
                                 <td>{{$record->phone}}</td>
+                                <!-- <td class="text-center">
+                                    {!! \App\MyHelper\Helper::toggleBooleanView($record , url('admin/category/toggle-boolean/'.$record->id.'/is_active'),'is_active') !!}
+                                </td> -->
                             </tr>
                         @endforeach
                 </tbody>

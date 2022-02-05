@@ -55,6 +55,7 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
@@ -176,12 +177,8 @@ class CategoryController extends Controller
 
         $record->delete();
 
-        $data = [
-            'status' => 1,
-            'message' => 'تم الحذف بنجاح',
-            'id' => $id
-        ];
-        return Response::json($data, 200);
+        return redirect($this->url);
+
     }
     
     public function toggleBoolean($id, $action)

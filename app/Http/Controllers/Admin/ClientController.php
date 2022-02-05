@@ -126,15 +126,13 @@ class ClientController extends Controller
         //
     }
 
+    public function toggleBoolean($id, $action)
+    {
+        $record = $this->model->findOrFail($id);
+        Helper::toggleBoolean($record);
 
-
-
-
-
-
-
-
-
+        return Helper::responseJson(1, 'تمت العملية بنجاح');
+    }
 
 
 

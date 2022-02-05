@@ -101,10 +101,10 @@
                                     <button
                                             id="{{$record->id}}"
                                             data-token="{{ csrf_token() }}"
-                                            data-route="{{url('admin/categories/'.$record->id)}}"
+                                            data-route="{{url('admin/clientss/'.$record->id)}}"
                                             type="button"
                                             class="destroy btn btn-danger btn-xs">
-                                           <i class="fa fa-trash-o"></i>
+                                        <i class="fa fa-trash-o"></i>
                                     </button>
                                 </td>
                             </tr>
