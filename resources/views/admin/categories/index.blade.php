@@ -98,14 +98,11 @@
                                 <td>{{$record->meta_des}}</td>
                                 <td class="text-center"><a href="{{url('admin/categories/' . $record->id .'/edit')}}" class="btn btn-xs btn-success"><i class="fa fa-edit"></i></a></td>
                                 <td class="text-center">
-                                    <button
-                                            id="{{$record->id}}"
-                                            data-token="{{ csrf_token() }}"
-                                            data-route="{{url('admin/clientss/'.$record->id)}}"
-                                            type="button"
-                                            class="destroy btn btn-danger btn-xs">
-                                        <i class="fa fa-trash-o"></i>
-                                    </button>
+                                <form method="post" action="{{route('categories.destroy' , ['category'=>$record->id])}}">
+                                 @csrf
+                                 @method('DELETE')
+                                <button type="submit" class="btn btn-danger mx-1">Delete</button>
+                                 </form>
                                 </td>
                             </tr>
                             </tr>
